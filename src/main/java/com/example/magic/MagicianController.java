@@ -19,7 +19,7 @@ public class MagicianController {
     MagicianService magicianService;
 
     @PostMapping
-    public ResponseEntity<Magician> save(@RequestBody Magician magician){
+    public ResponseEntity<?> save(@RequestBody Magician magician){
         Magician magician1 = magicianService.save(magician);
         log.info("saved magician {}", magician1.getName());
         return new ResponseEntity<Magician>(magician1, HttpStatus.OK);

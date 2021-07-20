@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 public class MagicianService {
     @Autowired
     MagicianRepo magicianRepo;
+
     public Magician save(Magician magician){
         return magicianRepo.save(magician);
     }
